@@ -11,50 +11,87 @@
 <body>
     <div class="wrapper">
         <h1 class="title">Walet</h1>
-        <div class="conteiner">
-            <div class="main">
-                <div class="diagram__blook">
-                    <h2 class="diagram__title">Диаграмма расходов</h2>
-                    <div class="diagram__main"></div>
-                </div>
-                <div class="legend">
-                    <ul class="legend__list">
-                        <li class="legend__item">
-                            <span class="legend__best">спорт</span>
-                            <span class="legend__potraril">2000</span>
-                        </li>
-                        <li class="legend__item">
-                            <span class="legend__prodykti">продукты</span>
-                            <span class="legend__potraril">2000</span>
-                        </li>
-                        <li class="legend__item">
-                            <span class="legend__fastfood">фастфуд</span>
-                            <span class="legend__potraril">2000</span>
-                        </li>
-                        <li class="legend__item">
-                            <span class="legend__napitok">напитки</span>
-                            <span class="legend__potraril">2000</span>
-                        </li>
-                    </ul>
+
+        <div class="main">
+            <div class="main__column main__resolt"></div>
+            <div class="diagram__blook">
+                <h2 class="diagram__title">Диаграмма расходов</h2>
+                <div class="canvas">
+                    <svg class="charts " width='300' height='300' viewBox='0 0 50 50'>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"> </circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"> </circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"> </circle>
+                        <circle class="unit" r="15.9" cx="50%" cy="50%"> </circle>
+                    </svg>
                 </div>
             </div>
-
-
-            <div class="table">
-                <div class="table__column table__result">
-                </div>
-                <div class="table__column purcashes"></div>
-                <table class="purcahes__table">
-                    <thead class="purcahes__head">
-                        <td class="purcahes__name">имя</td>
-                        <td class="purcahes__category">сатегория</td>
-                        <td class="purcahes__prise">цена</td>
-                    </thead>
-
-                </table>
+            <div class="legend">
+                <ul class="legend__list">
+                    <li class="legend__item" data-category="produst">
+                        <span class="legend__category">спорт</span>
+                        <span class="legend__prise" data-category="produst">2000</span>
+                    </li>
+                    <li class="legend__item">
+                        <span class="legend__prodykti">продукты</span>
+                        <span class="legend__prise">2000</span>
+                    </li>
+                    <li class="legend__item">
+                        <span class="legend__fastfood">фастфуд</span>
+                        <span class="legend__prise">2000</span>
+                    </li>
+                    <li class="legend__item">
+                        <span class="legend__napitok">напитки</span>
+                        <span class="legend__prise">2000</span>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+
+
+        <div class="main__column purcashes">
+            <table class="purcashes__table">
+                <thead class="purcashes__header">
+                    <tr class="purcashes__row">
+                        <td class="purcashes__td">наименование </td>
+                        <td class="purcashes__td">категория</td>
+                        <td class="purcashes__td">цена</td>
+                        <td class="purcashes__td"></td>
+                    </tr>
+                </thead>
+
+                <tbody class="purcashes__lust" id="tbody">
+
+                </tbody>
+
+            </table>
+        </div>
+        <div class="main__column editor">
+            <form class="editor__form" name="form">
+                <div class="editor__form-row">
+                    <p class="editor__form-input-name">товар</p>
+                    <input type="text" class="editor__form-input" name="name" placeholder="НАИМЕНОВАНИЯ">
+
+                </div>
+
+
+                <div class="editor__form-row">
+                    <p class="editor__form-input-name">цена</p>
+                    <input type="text" class="editor__form-input" name="legend__prise" placeholder="0">
+
+                </div>
+
+
+                <div class="editor__form-row">
+                    <p class="editor__form-input-name">категория</p>
+                    <select name="" id=""></select>
+
+                </div>
+
+
+
+            </form>
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
